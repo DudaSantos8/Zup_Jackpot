@@ -12,12 +12,8 @@ public class JackspotService {
 
     public String runExecute(int alavanca){
         String valorAleatorioNome = "";
-        int validacao = 0;
-        int pontucaoBonus = 0;
-        int controladorWhile = 0;
-        int pontuacaoFinal = 0;
+        int validacao = 0, pontucaoBonus = 0, controladorWhile = 0, pontuacaoFinal = 0;
         List<String> valoresSoteados = new ArrayList<>();
-
 
         while (controladorWhile < 8) {
             ValoresDoJogoEnum valorAleatorio = gerarValorAleatorio();
@@ -52,10 +48,8 @@ public class JackspotService {
             controladorWhile++;
         }
 
-        String retorno = "-------------------------------- \nValores sorteados: \n"+ valoresSoteados + "\n"
+        return "-------------------------------- \nValores sorteados: \n"+ valoresSoteados + "\n"
                 + "\nPontuação final: " + pontuacaoFinal + "\n--------------------------------";
-
-        return retorno;
     }
 
     private static ValoresDoJogoEnum gerarValorAleatorio() {
